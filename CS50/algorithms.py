@@ -24,7 +24,7 @@ def linear_search(array, val, position):
     else: 
         return True
 
-# Binery search recursive
+# Binary search recursive
 
 def binary_search(array, val):
     left, right = 0, len(array)-1
