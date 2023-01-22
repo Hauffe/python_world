@@ -1,5 +1,6 @@
 count = 0
 matrix = [[]]
+values = []
 
 with open('input.txt', 'r') as f:
     lines = f.readlines()
