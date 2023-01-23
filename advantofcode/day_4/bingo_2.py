@@ -45,5 +45,18 @@ def find_first_winner(called_numbers, boards):
                 print(boards[j].marked)
                 return j, called_number
             
-winner_index, called_number = find_first_winner(called_numbers, boards)    
+def find_last_winner(called_numbers, boards):
+    winners = []
+    winner_call = 0
+    for called_number in called_numbers:
+        for j in range(len(boards)):
+            if j not in winners:
+                boards[j].check_called_number(called_number)
+                if boards[j].check_win():
+                    winners.append(j)
+                    print(f"Board {j+1} won!")
+                    winner_call = called_number
+    return winners[-1], winner_call
+            
+winner_index, called_number = find_last_winner(called_numbers, boards)    
 print('score', boards[winner_index].calculate_score(called_number))
