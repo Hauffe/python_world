@@ -1,0 +1,9 @@
+# this uses conda env, to run it:
+# conda env create -f environment.yml
+# VSCode point to conda interpreter:
+# shift + cmd + P
+# Search Select Interpreter
+
+name: adventofcode
+dependencies:
+  - numpy

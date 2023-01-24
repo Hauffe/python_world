@@ -22,7 +22,7 @@ class Board:
         return (self.board * (self.marked==0)).sum() * called_number
     
 
-with open('input.txt', 'r') as f:
+with open('advantofcode/day_4/input.txt', 'r') as f:
     lines = [entry.strip() for entry in f.readlines()]
 
     called_numbers = [int(entry) for entry in lines[0].split(',')]
