@@ -25,7 +25,7 @@ def critical_points(grid, x1, x2, y1, y2):
 
 
 
-with open('advantofcode/day_5/input.txt') as f:
+with open('adventofcode/day_5/input.txt') as f:
     lines = [entry.strip() for entry in f.readlines()]
     for l in lines:
         x1, y1, x2, y2 = [int(val) for val in l.replace(' -> ', ',').split(',')]
