@@ -18,9 +18,8 @@ for val_1 in range(min_val, max_val):
     tmp_sum = 0
     for val in values:
         casas = abs(val_1 - val)
-        tmp_sum += sum([a for a in range(1, casas+1)])
-    if tmp_sum < min_sum:
-            min_sum = tmp_sum
+        tmp_sum += (casas*(casas+1))//2
+    min_sum = min(min_sum, tmp_sum)
     print(f'Min for {val_1} is {min_sum}')
 
 print(min_sum)
