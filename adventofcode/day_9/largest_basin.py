@@ -1,0 +1,1 @@
+# we found the certers, now we can use the same algorithm to run around those points and count until it hits the mountains (num 9)
