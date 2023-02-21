@@ -26,3 +26,11 @@ df.select(
   f.expr("avg(V)").alias("expr(avg)"),
   f.expr("mean(V)").alias("expr(mean)")
   ).show()
+
+europe_big_three_emissions = modern_era_df \
+    .groupBy("Year") \
+    .pivot("Country", values=["France", "Germany", "United Kingdom"]) \
+    .agg(
+        F.first("TotalEmissions").alias("TotalEmissions"),
+        F.first("PerCapitaEmissions").alias("PerCapitaEmissions")
+    )
