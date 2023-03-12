@@ -17,6 +17,7 @@ def verify_characteres(line):
                 verifying_arr.pop()
             else:
                 print(f'expected {open_close_chars.get(verifying_arr[-1])}, but found ')
+                print(verifying_arr)
                 return character
     return True
 
