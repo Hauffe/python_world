@@ -11,7 +11,12 @@ def solution(nums):
             return count
     return -1
 
-
+def solution(num, value):
+    count = 0
+    for n in nums:
+        if value == n:
+            count+=1
+    return count
 
 def undo(history, result):
     operation = history[-1][0]
@@ -42,6 +47,30 @@ def solution(operations):
         
 
 
+# ponto1 = [1,2]
+# ponto2 = [2,3]
+# ponto3 = [3,4]
+
+# def distancia(ponto1, ponto2, ponto3):
+#     dist1 = ((ponto2[0]-ponto1[0])**2 + (ponto2[1]-ponto1[1])**2)**(1/2)
+#     dist2 = ((ponto2[0]-ponto3[0])**2 + (ponto2[1]-ponto3[1])**2)**(1/2)
+#     dist3 = ((ponto3[0]-ponto1[0])**2 + (ponto3[1]-ponto1[1])**2)**(1/2)
+#     return sum(dist1, dist2, dist3)
+
+
+def QuasePalindromo(text):
+    cont_fim = len(text)
+    cont_ini = 0
+    cont_quase = 0
+    while cont_quase<=1 and cont_fim>cont_ini:
+        if text[cont_ini] != text[cont_fim]:
+            cont_quase+=1
+            if cont_quase >1:
+                return False
+        cont_fim -=1
+        cont_ini +=1
+    return True
+
 # There are 8 ways to make a 3×3 magic square.
 
 # n=4
@@ -69,12 +98,12 @@ def solve(x):
 
 
 solve([22, 15, 14, 0, 5, 0, 9, 12, 0, 0, 0, 0, 0, 0, 0, 3, 17, 20, 0, 0, 0, 0, 0, 0, 23])
-# operations = ["DELETE", "DELETE", "INSERT Nothing", 
-#  "INSERT is", 
-#  "INSERT Permanent", 
-#  "UNDO", 
-#  "UNDO", 
-#  "UNDO",
-#  "UNDO"]
+operations = ["DELETE", "DELETE", "INSERT Nothing", 
+ "INSERT is", 
+ "INSERT Permanent", 
+ "UNDO", 
+ "UNDO", 
+ "UNDO",
+ "UNDO"]
 
-# solution(operations)
+solution(operations)

@@ -100,3 +100,9 @@ def merge_sort(array):
             j=j+1
             k=k+1
 
+count = 0
+for i in range(1, 100, 2):
+    print(i)
+    count+=1
+
+print(count)
